@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Jesus Miguel Diaz Diaz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            width: 210mm;
+            height: 297mm;
+            font-family: 'Montserrat', sans-serif;
+            color: #2D3748;
+            background-color: #FFFFFF;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Left Column (Sidebar) */
+        .sidebar {
+            width: 72mm;
+            height: 100%;
+            background-color: #EAF2FA; /* Light Celeste */
+            padding: 25mm 8mm 15mm 8mm;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar-title {
+            background-color: #FFFFFF;
+            color: #2D3748;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+            padding: 7px 10px;
+            margin-top: 30px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .sidebar-title:first-of-type {
+            margin-top: 0;
+        }
+        
+        /* Contact Section */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 11px;
+            color: #334155;
+            line-height: 1.4;
+        }
+        
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1F5C8E; /* Accent Celeste Blue */
+            flex-shrink: 0;
+        }
+        
+        .contact-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+        
+        .contact-text {
+            word-break: break-all;
+        }
+        
+        /* Soft Skills List (No Bullets) */
+        .soft-skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .soft-skills-list li {
+            font-size: 12px;
+            color: #334155;
+            margin-bottom: 9px;
+            line-height: 1.3;
+            font-weight: 400;
+        }
+        
+        /* Languages & Hard Skills Lists (With Bullets) */
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .bullet-list li {
+            font-size: 12px;
+            color: #334155;
+            margin-bottom: 9px;
+            line-height: 1.3;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .bullet-list li::before {
+            content: "•";
+            color: #1F5C8E; /* Accent Celeste Blue */
+            font-size: 14px;
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+        
+        /* Right Column (Main Content) */
+        .main-content {
+            width: 138mm;
+            height: 100%;
+            padding: 25mm 12mm 15mm 12mm;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header Block */
+        .header {
+            margin-bottom: 10px;
+        }
+        
+        .name {
+            font-size: 38px;
+            line-height: 1.05;
+            color: #1A202C;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        .name-first {
+            font-weight: 300;
+            display: block;
+        }
+        
+        .name-last {
+            font-weight: 700;
+            display: block;
+        }
+        
+        .subtitle {
+            margin-top: 15px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #1F5C8E; /* Accent Celeste Blue */
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .divider {
+            margin-top: 18px;
+            margin-bottom: 22px;
+            height: 3px;
+            background-color: #D0E6F8; /* Celeste line */
+            border: none;
+        }
+        
+        /* Main Sections */
+        .section-title {
+            background-color: #D0E6F8; /* Celeste block */
+            color: #1A202C;
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            padding: 6px 12px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .profile-desc {
+            font-size: 12.5px;
+            color: #4A5568;
+            line-height: 1.6;
+            text-align: justify;
+            font-weight: 400;
+        }
+        
+        /* Education Items */
+        .education-item {
+            margin-bottom: 18px;
+        }
+        
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .edu-date {
+            font-size: 11px;
+            color: #718096;
+            margin-bottom: 3px;
+            font-weight: 400;
+        }
+        
+        .edu-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #2D3748;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .edu-inst {
+            font-size: 11.5px;
+            color: #4A5568;
+            text-transform: uppercase;
+            margin-top: 2px;
+            font-weight: 500;
+        }
+        
+        .edu-desc {
+            font-size: 11.5px;
+            color: #718096;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <!-- CONTACT -->
+            <div class="sidebar-title">CONTACTO</div>
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </span>
+                <span class="contact-text">967 167 121</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </span>
+                <span class="contact-text">diazdiazjesusmigeul1004@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </span>
+                <span class="contact-text">Mariano Melgar, Arequipa</span>
+            </div>
+            
+            <!-- SOFT SKILLS -->
+            <div class="sidebar-title">HABILIDADES</div>
+            <ul class="soft-skills-list">
+                <li>Trabajo en equipo</li>
+                <li>Resolución de problemas</li>
+                <li>Capacidad de aprendizaje</li>
+                <li>Proactividad</li>
+                <li>Pensamiento lógico</li>
+            </ul>
+            
+            <!-- LANGUAGES -->
+            <div class="sidebar-title">IDIOMAS</div>
+            <ul class="bullet-list">
+                <li>Español - Nativo</li>
+            </ul>
+            
+            <!-- TECHNICAL SKILLS -->
+            <div class="sidebar-title">HABILIDADES</div>
+            <ul class="bullet-list">
+                <li>Python</li>
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+                <li>Excel Avanzado</li>
+                <li>Word Avanzado</li>
+            </ul>
+        </div>
+        
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- HEADER -->
+            <div class="header">
+                <h1 class="name">
+                    <span class="name-first">Jesus Miguel</span>
+                    <span class="name-last">DIAZ DIAZ</span>
+                </h1>
+                <div class="subtitle">ESTUDIANTE DE DISEÑO Y DESARROLLO DE SOFTWARE</div>
+            </div>
+            
+            <hr class="divider">
+            
+            <!-- PROFESSIONAL PROFILE -->
+            <div class="section-title">PERFIL PROFESIONAL</div>
+            <div class="profile-desc">
+                Estudiante de cuarto semestre de Diseño y Desarrollo de Software en Tecsup. Conocimientos en desarrollo web/móvil y bases de datos. Proactivo, enfocado en la resolución de problemas y capacidad de aprendizaje para sumarse a proyectos de tecnología.
+            </div>
+            
+            <!-- EDUCATION -->
+            <div class="section-title">ESTUDIOS</div>
+            
+            <div class="education-item">
+                <div class="edu-date">2026 – Actualmente</div>
+                <div class="edu-title">Diseño y Desarrollo de Software</div>
+                <div class="edu-inst">Tecsup - Arequipa</div>
+                <div class="edu-desc">Estudiante del 4to semestre. Aprendizaje enfocado en programación, base de datos y desarrollo web y móvil.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

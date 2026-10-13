@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Jesus Miguel Diaz Diaz</title>
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS & Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="brand-avatar">JD</div>
+                <div class="brand-container ms-2">
+                    <div>
+                        <div class="brand-title">Jesus Miguel Diaz</div>
+                        <div class="brand-subtitle">Desarrollo de Software · Tecsup</div>
+                    </div>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
+                <ul class="navbar-nav align-items-lg-center gap-1 my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experiencia.html">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="educacion.html">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="proyectos.html">Proyectos</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link navbar-cta" href="contacto.html">
+                            <i class="bi bi-send-fill me-1"></i> Contáctame
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="page-wrapper py-5">
+        <div class="container">
+            <!-- HEADER DE SECCIÓN -->
+            <div class="mb-5">
+                <span class="section-tag"><i class="bi bi-collection-fill"></i> Portafolio Práctico</span>
+                <h1 class="section-title-modern">Mis Proyectos Destacados</h1>
+                <p class="section-subtitle-modern">Selección de proyectos de desarrollo web, servidores en backend, modelado relacional y lógica de software.</p>
+            </div>
+
+            <!-- GRID DE PROYECTOS -->
+            <div class="row g-4">
+                
+                <!-- PROYECTO 1: SERVIDOR WEB NODE.JS -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div>
+                                <span class="tag-badge mb-1"><i class="bi bi-server"></i> Backend / HTTP</span>
+                                <h4 class="fw-bold text-dark mb-0">Servidor Web Nativo en Node.js</h4>
+                            </div>
+                            <div class="skill-icon-wrapper m-0">
+                                <i class="bi bi-code-square"></i>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <p class="text-muted small mb-3">
+                                Construcción integral de un servidor web utilizando la API nativa <code>http</code> y <code>fs</code> de Node.js. Soporta despacho de activos estáticos con detección MIME (HTML, CSS, JS, SVG, WebP, PDF), procesamiento de formularios por método POST y redirección 302 hacia página de confirmación.
+                            </p>
+                            <div class="p-3 bg-light rounded-3 border mb-3 small">
+                                <strong class="text-dark d-block mb-1"><i class="bi bi-check-circle text-primary me-1"></i> Aspectos destacados:</strong>
+                                <span class="text-muted">Cero dependencias externas pesadas, arquitectura basada en eventos asíncronos y página personalizada de error 404.</span>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 mt-auto">
+                                <span class="tag-badge">Node.js</span>
+                                <span class="tag-badge">JavaScript</span>
+                                <span class="tag-badge">HTTP API</span>
+                                <span class="tag-badge">Bootstrap 5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 2: MODELADO DE BASE DE DATOS BANCARIA (3NF) -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div>
+                                <span class="tag-badge mb-1"><i class="bi bi-database"></i> Bases de Datos / SQL</span>
+                                <h4 class="fw-bold text-dark mb-0">Sistema Bancario Relacional (3NF)</h4>
+                            </div>
+                            <div class="skill-icon-wrapper m-0">
+                                <i class="bi bi-bank2"></i>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <p class="text-muted small mb-3">
+                                Diseño y estructuración de una base de datos bancaria rigurosamente normalizada bajo la Tercera Forma Normal (3NF). Modela las operaciones de cuentahabientes, transacciones monetarias, créditos, cuentas de ahorro y contratos bancarios con restricciones de integridad.
+                            </p>
+                            <div class="p-3 bg-light rounded-3 border mb-3 small">
+                                <strong class="text-dark d-block mb-1"><i class="bi bi-check-circle text-primary me-1"></i> Aspectos destacados:</strong>
+                                <span class="text-muted">Eliminación de redundancias y dependencias transitivas, triggers de auditoría e indexación para consultas complejas.</span>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 mt-auto">
+                                <span class="tag-badge">MySQL</span>
+                                <span class="tag-badge">Diagramas E-R</span>
+                                <span class="tag-badge">Normalización 3NF</span>
+                                <span class="tag-badge">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 3: GESTIÓN DE INVENTARIOS Y CATÁLOGOS -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div>
+                                <span class="tag-badge mb-1"><i class="bi bi-boxes"></i> Automatización & Datos</span>
+                                <h4 class="fw-bold text-dark mb-0">Gestión de Inventarios y Catálogos</h4>
+                            </div>
+                            <div class="skill-icon-wrapper m-0">
+                                <i class="bi bi-clipboard2-data-fill"></i>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <p class="text-muted small mb-3">
+                                Solución operativa desarrollada para el control preciso y sistematización de existencias de almacén, flujo de ventas y catálogo comercial para el rubro de calzado y distribución comercial.
+                            </p>
+                            <div class="p-3 bg-light rounded-3 border mb-3 small">
+                                <strong class="text-dark d-block mb-1"><i class="bi bi-check-circle text-primary me-1"></i> Aspectos destacados:</strong>
+                                <span class="text-muted">Tablas dinámicas, validaciones automáticas de stock mínimo, generación de catálogos y resúmenes ejecutivos sin errores de digitación.</span>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 mt-auto">
+                                <span class="tag-badge">Excel Avanzado</span>
+                                <span class="tag-badge">Control de Stock</span>
+                                <span class="tag-badge">Gestión Comercial</span>
+                                <span class="tag-badge">Logística</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 4: SISTEMA ACUARIO HERENCIA (POO) -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div>
+                                <span class="tag-badge mb-1"><i class="bi bi-diagram-3"></i> Paradigma POO / Arquitectura</span>
+                                <h4 class="fw-bold text-dark mb-0">Aplicación POO: Acuario Herencia</h4>
+                            </div>
+                            <div class="skill-icon-wrapper m-0">
+                                <i class="bi bi-water"></i>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <p class="text-muted small mb-3">
+                                Implementación de una arquitectura orientada a objetos que modela ecosistemas acuáticos mediante conceptos avanzados de herencia de clases, métodos polimórficos, encapsulamiento de datos y modularidad limpia.
+                            </p>
+                            <div class="p-3 bg-light rounded-3 border mb-3 small">
+                                <strong class="text-dark d-block mb-1"><i class="bi bi-check-circle text-primary me-1"></i> Aspectos destacados:</strong>
+                                <span class="text-muted">Estructura jerárquica de clases base y derivadas, control de versiones mediante Git y buenas prácticas de código limpio.</span>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 mt-auto">
+                                <span class="tag-badge">Python</span>
+                                <span class="tag-badge">JavaScript</span>
+                                <span class="tag-badge">POO / Herencia</span>
+                                <span class="tag-badge">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BANNER INFERIOR -->
+            <div class="mt-5 p-4 rounded-4 bg-white border text-center">
+                <h4 class="fw-bold text-dark mb-2">¿Tienes una idea de software en mente?</h4>
+                <p class="text-muted small mb-3">Estoy listo para colaborar en desarrollos web, bases de datos o soluciones automatizadas.</p>
+                <a href="contacto.html" class="btn btn-primary-custom">
+                    <i class="bi bi-chat-quote-fill"></i> Hablemos de tu Proyecto
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-lg-5">
+                    <div class="footer-brand d-flex align-items-center gap-2">
+                        <div class="brand-avatar" style="width: 32px; height: 32px; font-size: 0.9rem;">JD</div>
+                        Jesus Miguel Diaz Diaz
+                    </div>
+                    <p class="small text-light-50 mb-3" style="color: #94A3B8;">
+                        Estudiante de Diseño y Desarrollo de Software en Tecsup Arequipa (4to semestre).
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="https://wa.me/51967167121" target="_blank" class="text-white fs-5" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="mailto:diazdiazjesusmigeul1004@gmail.com" class="text-white fs-5" title="Correo"><i class="bi bi-envelope-at-fill"></i></a>
+                        <a href="cv.html" target="_blank" class="text-white fs-5" title="CV en Línea"><i class="bi bi-file-earmark-text"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="text-white fw-bold text-uppercase mb-3 small" style="letter-spacing: 1px;">Navegación</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="sobre-mi.html" class="footer-link">Sobre Mí</a></li>
+                        <li><a href="experiencia.html" class="footer-link">Experiencia</a></li>
+                        <li><a href="educacion.html" class="footer-link">Educación</a></li>
+                        <li><a href="habilidades.html" class="footer-link">Habilidades</a></li>
+                        <li><a href="proyectos.html" class="footer-link">Proyectos</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white fw-bold text-uppercase mb-3 small" style="letter-spacing: 1px;">Contacto Directo</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2" style="color: #94A3B8;">
+                        <li><i class="bi bi-telephone-fill me-2 text-info"></i> 967 167 121</li>
+                        <li><i class="bi bi-envelope-fill me-2 text-info"></i> diazdiazjesusmigeul1004@gmail.com</li>
+                        <li><i class="bi bi-geo-alt-fill me-2 text-info"></i> Mariano Melgar, Arequipa - Perú</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row align-items-center justify-content-between small" style="color: #64748B;">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    &copy; 2026 Jesus Miguel Diaz Diaz · Desarrollado con Node.js & Bootstrap 5
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span>Tecsup - Arequipa</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS & Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
